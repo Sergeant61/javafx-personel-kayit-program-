@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="518.0" prefWidth="753.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="recep.gui.SorgulaCont">
+   <children>
+      <Label layoutX="22.0" layoutY="19.0" text="Başlangıç Tarihi" />
+      <DatePicker fx:id="dateBas" layoutX="135.0" layoutY="14.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="347.0" layoutY="19.0" text="Bitiş Tarihi" />
+      <DatePicker fx:id="dateSon" layoutX="429.0" layoutY="14.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="22.0" layoutY="60.0" text="Adı" />
+      <TextField fx:id="txtAd" layoutX="135.0" layoutY="55.0" prefHeight="31.0" prefWidth="202.0" />
+      <TextField fx:id="txtSoyad" layoutX="429.0" layoutY="55.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="347.0" layoutY="60.0" text="Soyadı" />
+      <RadioButton fx:id="radioYuz" layoutX="236.0" layoutY="98.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="96.0" text="Yüz yüze" />
+      <RadioButton fx:id="radioTel" layoutX="135.0" layoutY="98.0" mnemonicParsing="false" text="Telefon" />
+      <Label layoutX="22.0" layoutY="98.0" text="Görüşme Tipi" />
+      <ComboBox fx:id="comboHagiKurs" layoutX="429.0" layoutY="95.0" prefHeight="31.0" prefWidth="202.0" />
+      <Label layoutX="347.0" layoutY="98.0" text="Hangi Kurs" />
+      <TableView fx:id="tableList" layoutX="22.0" layoutY="136.0" prefHeight="366.0" prefWidth="711.0" />
+      <Button layoutX="668.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickSorgula" text="Sorgula" />
+   </children>
+</AnchorPane>
