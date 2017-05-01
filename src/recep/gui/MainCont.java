@@ -1,5 +1,6 @@
 package recep.gui;
 import java.net.URL;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -7,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -69,7 +71,33 @@ public class MainCont  implements Initializable {
 	
 	@FXML
 	public void onClickKursSil(){
-		TextInputDialog dialog = new TextInputDialog("");
+		
+		List<HangiKurs> myHangiKursList = null;
+		List<HangiKurs> myList = dao.getHangiKursList();
+		String[] kursAd = new String[myList.size()];
+		for (int i = 0; i < myList.size(); i++) {
+			kursAd[i] = dao.getHangiKursList().get(i).getKursAdi();
+		}
+
+		ChoiceDialog<String> dialog = new ChoiceDialog<>("Kurs Adý...", kursAd);
+		dialog.setTitle("Personel Kayýt Programý");
+		dialog.setHeaderText("Silinecek Kursu Seçiniz");
+		dialog.setContentText("Kurs adý:");
+		
+		Optional<String> result = dialog.showAndWait();
+		if (result.isPresent()){
+			myHangiKursList = dao.sorgulaHangiKurs(result.get());
+		}
+		
+		if(myHangiKursList != null){
+		
+		HangiKurs hangiKurs = new HangiKurs();
+		hangiKurs.setId(myHangiKursList.get(0).getId());
+		dao.deleteValue(hangiKurs);
+		
+		}
+		
+		/*TextInputDialog dialog = new TextInputDialog("");
 		dialog.setTitle("Personel Kayýt Programý");
 		dialog.setHeaderText("Silinecek Kursu Yazýnýz");
 		dialog.setContentText("Kurs adý:");
@@ -79,7 +107,7 @@ public class MainCont  implements Initializable {
 		    HangiKurs hangiKurs = new HangiKurs(result.get());
 		    
 		    dao.deleteValue(hangiKurs);
-		}
+		}*/
 	}
        
 }

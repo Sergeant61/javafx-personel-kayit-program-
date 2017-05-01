@@ -76,10 +76,10 @@ public class DAO {
 		try{
 			Criteria criteria = session.createCriteria(Person.class);
 			if(sorgulaEntity.getAd() != null && sorgulaEntity.getAd().length() > 0)
-				criteria.add(Restrictions.ilike("soyad", sorgulaEntity.getAd()));
+				criteria.add(Restrictions.ilike("ad", sorgulaEntity.getAd()));
 			
 			if(sorgulaEntity.getSoyad() != null && sorgulaEntity.getSoyad().length() > 0)
-				criteria.add(Restrictions.ilike("ad", sorgulaEntity.getSoyad()));
+				criteria.add(Restrictions.ilike("soyad", sorgulaEntity.getSoyad()));
 			
 			if(sorgulaEntity.getHangiKurs() != null && sorgulaEntity.getHangiKurs().length() > 0)
 				criteria.add(Restrictions.ilike("hangiKurs", sorgulaEntity.getHangiKurs()));
@@ -95,6 +95,25 @@ public class DAO {
 				criteria.add(Restrictions.eq("gorusmeTipi", sorgulaEntity.getType()));
 			
 			myList = (List<Person>)criteria.list();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}	
+		return myList;
+	}
+	
+	public List<HangiKurs> sorgulaHangiKurs(String value) {
+		Session session = sessionFactory.openSession();
+		List<HangiKurs> myList = null;
+		try{
+			Criteria criteria = session.createCriteria(HangiKurs.class);
+			
+			if( value.length() > 0)
+				criteria.add(Restrictions.ilike("kursAdi", value));
+			
+		
+			myList = (List<HangiKurs>)criteria.list();
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {

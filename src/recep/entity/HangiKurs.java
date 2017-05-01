@@ -22,6 +22,10 @@ public class HangiKurs {
 	public HangiKurs(String kursAdi) {
 		this.kursAdi = kursAdi;
 	}
+	
+	public void setId(int id) {
+		this.id=id;
+	}
 
 	public int getId() {
 		return id;
