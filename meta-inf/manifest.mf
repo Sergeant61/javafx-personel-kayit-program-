@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: Recep Özen
+Build-Jdk: 1.8.0_112
+Created-By: Apache Maven
+Main-Class: recep.guiMain
+Archiver-Version: Plexus Archiver
