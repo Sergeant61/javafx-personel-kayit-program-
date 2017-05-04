@@ -30,7 +30,7 @@ public class MainCont  implements Initializable {
 		Stage primaryStage = new Stage(); 
 		try {
 			primaryStage.setTitle("Personel Kayýt Programý");
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("KayitGir.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/recep/view/kayitGir.fxml"));
 			Scene scene = new Scene(root,370,520);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -45,7 +45,7 @@ public class MainCont  implements Initializable {
 		Stage primaryStage = new Stage(); 
 		try {
 			primaryStage.setTitle("Personel Kayýt Programý");
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sorgula.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/recep/view/sorgula.fxml"));
 			Scene scene = new Scene(root,753,518);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);

@@ -45,6 +45,8 @@
 
 		</plugins>
 	</build>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.hibernate</groupId>

@@ -20,7 +20,7 @@ public class DAO {
 	SessionFactory sessionFactory;
 
 	public DAO() {
-		sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		sessionFactory = new Configuration().configure("/recep/resource/hibernate.cfg.xml").buildSessionFactory();
 	}
 
 	public void addValue(Object obj) {
