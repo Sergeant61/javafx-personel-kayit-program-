@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="520.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recep.gui.KayitGirCont">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Adı" />
+      <Label layoutX="14.0" layoutY="55.0" text="Soyadı" />
+      <Label layoutX="14.0" layoutY="96.0" text="Telefon Nu" />
+      <Label layoutX="14.0" layoutY="135.0" text="E-mail" />
+      <Label layoutX="14.0" layoutY="176.0" text="Hangi  Kurs" />
+      <Label layoutX="14.0" layoutY="212.0" text="Görüşme Tipi" />
+      <Label layoutX="16.0" layoutY="243.0" text="Mesaj" />
+      <TextField fx:id="txtAd" layoutX="117.0" layoutY="9.0" prefHeight="31.0" prefWidth="240.0" />
+      <TextField fx:id="txtSoyad" layoutX="117.0" layoutY="50.0" prefHeight="31.0" prefWidth="240.0" />
+      <TextField fx:id="txtTel" layoutX="117.0" layoutY="91.0" prefHeight="31.0" prefWidth="240.0" />
+      <TextField fx:id="txtEmail" layoutX="117.0" layoutY="130.0" prefHeight="31.0" prefWidth="240.0" />
+      <ComboBox fx:id="comboHagiKurs" layoutX="117.0" layoutY="171.0" prefHeight="31.0" prefWidth="240.0" />
+      <TextArea fx:id="txtMesaj" layoutX="17.0" layoutY="270.0" prefHeight="195.0" prefWidth="341.0" />
+      <Button layoutX="293.0" layoutY="475.0" mnemonicParsing="false" onAction="#onClickKaydet" text="Kaydet" />
+      <RadioButton fx:id="radioTel" layoutX="117.0" layoutY="212.0" mnemonicParsing="false" text="Telefon" />
+      <RadioButton fx:id="radioYuz" layoutX="237.0" layoutY="212.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="96.0" text="Yüz yüze" />
+   </children>
+</AnchorPane>

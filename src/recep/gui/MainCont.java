@@ -30,7 +30,7 @@ public class MainCont  implements Initializable {
 		Stage primaryStage = new Stage(); 
 		try {
 			primaryStage.setTitle("Personel Kayýt Programý");
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/recep/view/kayitGir.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/recep/view/kayitgir.fxml"));
 			Scene scene = new Scene(root,370,520);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
